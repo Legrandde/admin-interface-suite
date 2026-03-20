@@ -53,6 +53,7 @@ const App = () => (
             <Route path="/fournisseurs" element={<ProtectedRoute><FournisseursPage /></ProtectedRoute>} />
             <Route path="/historique" element={<ProtectedRoute><HistoriquePage /></ProtectedRoute>} />
             <Route path="/utilisateurs" element={<ProtectedRoute><UtilisateursPage /></ProtectedRoute>} />
+            <Route path="/profil" element={<ProtectedRoute><ProfilPage /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>

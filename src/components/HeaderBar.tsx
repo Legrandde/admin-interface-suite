@@ -129,7 +129,7 @@ export function HeaderBar() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-48">
-          <DropdownMenuItem>
+          <DropdownMenuItem onClick={() => window.location.href = "/profil"}>
             <User className="mr-2 h-4 w-4" />
             Profil
           </DropdownMenuItem>
