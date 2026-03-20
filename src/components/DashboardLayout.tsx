@@ -1,5 +1,6 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
+import { HeaderBar } from "@/components/HeaderBar";
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -7,10 +8,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
       <div className="min-h-screen flex w-full">
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0">
-          <header className="h-14 flex items-center border-b border-border bg-card px-4 sticky top-0 z-10">
-            <SidebarTrigger className="mr-4" />
-            <div className="flex-1" />
-          </header>
+          <HeaderBar />
           <main className="flex-1 p-6 animate-fade-in">
             {children}
           </main>
