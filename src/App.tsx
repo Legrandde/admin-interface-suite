@@ -15,6 +15,7 @@ import FacturesPage from "./pages/FacturesPage";
 import FournisseursPage from "./pages/FournisseursPage";
 import HistoriquePage from "./pages/HistoriquePage";
 import UtilisateursPage from "./pages/UtilisateursPage";
+import ProfilPage from "./pages/ProfilPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
