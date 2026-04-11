@@ -6,6 +6,7 @@ interface Equipement {
   nom: string;
   consommation?: number;
   etat?: number;
+  site: number;
 }
 
 const columns = [
@@ -20,12 +21,14 @@ const columns = [
       </Badge>
     ),
   },
+  { key: "site", label: "Site" },
 ];
 
 const formFields = [
   { key: "nom", label: "Nom", required: true },
   { key: "consommation", label: "Consommation", type: "number" as const },
   { key: "etat", label: "État", type: "number" as const },
+  { key: "site", label: "Site (ID)", type: "number" as const, required: true },
 ];
 
 const EquipementsPage = () => (

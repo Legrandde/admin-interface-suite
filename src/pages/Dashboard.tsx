@@ -33,7 +33,7 @@ const Dashboard = () => {
   const compteurs = useCrud("/compteur/");
   const factures = useCrud("/facture/");
   const fournisseurs = useCrud("/fournisseur/");
-  const utilisateurs = useCrud("/utilisateur/");
+  const utilisateurs = useCrud("/users/");
   const historique = useCrud("/historiqueConsomatin/");
 
   const stats = [
