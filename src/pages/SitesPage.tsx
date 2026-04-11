@@ -1,12 +1,17 @@
 import { CrudPage } from "@/components/CrudPage";
 
+interface Equipement {
+  id?: number;
+  nom: string;
+}
+
 interface Site {
   id?: number;
   nom: string;
   type?: string;
   utilisateur: number;
   compteur: number;
-  equipements: number;
+  equipements?: Equipement[];
 }
 
 const columns = [
@@ -15,7 +20,10 @@ const columns = [
   { key: "type", label: "Type" },
   { key: "utilisateur", label: "Utilisateur" },
   { key: "compteur", label: "Compteur" },
-  { key: "equipements", label: "Équipements" },
+  {
+    key: "equipements", label: "Équipements",
+    render: (item: Site) => Array.isArray(item.equipements) ? `${item.equipements.length} équipement(s)` : "—",
+  },
 ];
 
 const formFields = [
@@ -23,7 +31,6 @@ const formFields = [
   { key: "type", label: "Type" },
   { key: "utilisateur", label: "Utilisateur (ID)", type: "number" as const, required: true },
   { key: "compteur", label: "Compteur (ID)", type: "number" as const, required: true },
-  { key: "equipements", label: "Équipements (ID)", type: "number" as const, required: true },
 ];
 
 const SitesPage = () => (

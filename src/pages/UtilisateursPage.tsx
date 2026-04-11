@@ -12,6 +12,7 @@ interface Utilisateur {
   user_role: string;
   is_active?: boolean;
   date_joined?: string;
+  user_avatar?: string;
 }
 
 const columns = [
@@ -53,7 +54,7 @@ const formFields = [
 ];
 
 const UtilisateursPage = () => (
-  <CrudPage<Utilisateur> title="Utilisateurs" endpoint="/utilisateur/" columns={columns} formFields={formFields} />
+  <CrudPage<Utilisateur> title="Utilisateurs" endpoint="/users/" columns={columns} formFields={formFields} />
 );
 
 export default UtilisateursPage;
